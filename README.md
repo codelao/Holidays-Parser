@@ -11,3 +11,7 @@
 <p align="center">
 <img src="./example.png" width="50%">
 </p>
+
+
+### P.S. 
+#### site with daily quotes which parser is using stopped posting new quotes. I'll change this site to another in some time and make an update
