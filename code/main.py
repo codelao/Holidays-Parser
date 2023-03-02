@@ -4,19 +4,17 @@ from db import Database
 from bs4 import BeautifulSoup
 
 
-db = Database('quotedb.db')
-
+db = Database('holidays.db')
 
 today = datetime.datetime.today()
 date = today.strftime("%m/%d/%Y") #today's date
 
 
-site_link = 'https://thedailyquotes.com/quote-of-the-day/'
+site_link = 'https://www.checkiday.com/'
 get_site = requests.get(site_link).text
-bs = BeautifulSoup(get_site, 'lxml')
+parse = BeautifulSoup(get_site, 'lxml')
 
-block = bs.find('div', id="fl-main-content")
+block = parse.find('section', id='magicGrid')
+holiday = block.find('h2').get_text(strip=True)
 
-result = block.find('h3').get_text(strip=True)
-response = f'{date}: {result}' #today's date: Quote of the day
-db.quote_add(response) #add response result to database
+db.holiday_add(date=date, holiday=holiday) #add holiday with it's date to the database
