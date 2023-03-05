@@ -1,7 +1,6 @@
 # 2.0.0
 *2023-03-02*
 
-
 ### Removed 
 - Quotes parser
 - Old site with quotes
@@ -17,6 +16,5 @@
 
 # 1.0.0
 *2023-01-15*
-
 
 ### Hi
