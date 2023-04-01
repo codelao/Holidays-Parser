@@ -1,19 +1,10 @@
 <h1 align="center">
-  Today's Holiday Parser
+  Holidays parser
 </h1>
 
 <h3 align="center">
-  By <a href="https://github.com/codelao">Code Lao</a>
+  Today's holiday parser with database
 </h3>
-
-<p align="center">
-  <a href="#requirements">
-    Requirements
-  </a> •
-  <a href="#usage">
-    Usage
-  </a>
-</p>
 
 
 ## Screenshots
