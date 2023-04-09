@@ -9,7 +9,7 @@
 
 ## Screenshots
 <p>
-  <img src="./example_pic.png" width="50%">
+  <img src="./example.png" width="50%">
 </p>
 
 
