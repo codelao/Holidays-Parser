@@ -13,15 +13,20 @@
 </p>
 
 
-## Requirements
-<p>
-  <img src="https://img.shields.io/badge/python-red">
-  <img src="https://img.shields.io/badge/requests-blue">
-  <img src="https://img.shields.io/badge/DateTime-blue">
-  <img src="https://img.shields.io/badge/beautifulsoup4-blue">
-</p>
+## Installation
+*Note: you need to have Python installed in your system before moving to the next step*
+```
+$ git clone https://github.com/codelao/Holidays-Parser.git
+$ cd Holidays-Parser
+$ pip install -r requirements.txt
+$ cd code
+$ python main.py
+```
+*Note: if the last command doesn't work, run:*
+```
+$ python3 main.py
+```
 
 
 ## Usage
-- Run the script from [main.py](https://github.com/codelao/Todays-Holiday-Parser/blob/main/code/main.py) file
-- You will find today's holiday in the auto-created database file
+After running the script you will find today's holiday in the auto-created database file
