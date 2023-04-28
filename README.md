@@ -14,19 +14,15 @@
 
 
 ## Installation
-*Note: you need to have Python installed in your system before moving to the next step*
+
 ```
 $ git clone https://github.com/codelao/Holidays-Parser.git
 $ cd Holidays-Parser
-$ pip install -r requirements.txt
+$ pip3 install -r requirements.txt
 $ cd code
-$ python main.py
-```
-*Note: if the last command doesn't work, run:*
-```
 $ python3 main.py
 ```
 
 
 ## Usage
-After running the script you will find today's holiday in the auto-created database file
+After running the script you will find today's holiday in the auto-created database file in the app folder
