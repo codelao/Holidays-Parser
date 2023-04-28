@@ -1,6 +1,7 @@
 import requests
 import datetime
 import sys
+import colorama
 from db import Database
 from bs4 import BeautifulSoup
 from urllib.request import urlopen
@@ -24,6 +25,7 @@ class App:
 
     def parser(self):
         if not self.check_internet_connection() == False:
+            colorama.init()
             self.today = datetime.datetime.today()
             self.date = self.today.strftime("%m/%d/%Y")
             self.site_link = 'https://www.checkiday.com/'
