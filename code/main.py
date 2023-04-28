@@ -32,8 +32,8 @@ class App:
             self.get_site = requests.get(self.site_link).text
             self.soup = BeautifulSoup(self.get_site, 'lxml')
             self.holiday = self.soup.find_all('h2')[0].get_text(strip=True)
-            self.holidays_parsed = db.parsed_holidays()
             db.holiday_add(date=self.date, holiday=self.holiday)
+            self.holidays_parsed = db.parsed_holidays()
             print('Today is ' + colored(self.holiday, 'green') + '\nHolidays parsed: ' + colored(self.holidays_parsed, 'blue'))
             sys.exit()
         else:
