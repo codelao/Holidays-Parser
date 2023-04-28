@@ -9,12 +9,12 @@
 
 ## Screenshots
 <p>
-  <img src="./example.png" width="50%">
+  <img src="./screenshot1.png" width="50%">
+  <img src="./screenshot2.png" width="50%">
 </p>
 
 
 ## Installation
-
 ```
 $ git clone https://github.com/codelao/Holidays-Parser.git
 $ cd Holidays-Parser
@@ -25,4 +25,6 @@ $ python3 main.py
 
 
 ## Usage
-After running the script you will find today's holiday in the auto-created database file in the app folder
+After running the script you will see today's holiday in the terminal and in the **Holidays-Parser/code/** folder in the auto-created *holidays.db* file.
+
+You can open this *.db* file with SQLiteStudio

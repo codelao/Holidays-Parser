@@ -1,3 +1,4 @@
 requests
 DateTime
 beautifulsoup4
+lxml

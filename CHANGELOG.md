@@ -1,3 +1,13 @@
+# 1.2.2
+*2023-04-28*
+
+### Small improvements
+### Added
+- Internet connection check
+- Today's holiday now appears in the terminal
+- Number of parsed holidays
+
+
 # 1.1.1
 *2023-04-09*
 

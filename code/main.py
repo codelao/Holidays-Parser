@@ -1,17 +1,43 @@
 import requests
 import datetime
+import sys
 from db import Database
 from bs4 import BeautifulSoup
+from urllib.request import urlopen
+from termcolor import colored
 
 
 db = Database('holidays.db')
 
-today = datetime.datetime.today()
-date = today.strftime("%m/%d/%Y") #today's date
 
-site_link = 'https://www.checkiday.com/'
-get_site = requests.get(site_link).text
-parser = BeautifulSoup(get_site, 'lxml')
-holiday = parser.find_all('h2')[0].get_text(strip=True)
+class App:
+    def __init__(self):
+        self.check_internet_connection()
+        self.parser()
 
-db.holiday_add(date=date, holiday=holiday)
+    def check_internet_connection(self):
+        try:
+            urlopen('https://google.com')
+            return True
+        except:
+            return False
+
+    def parser(self):
+        if not self.check_internet_connection() == False:
+            self.today = datetime.datetime.today()
+            self.date = self.today.strftime("%m/%d/%Y")
+            self.site_link = 'https://www.checkiday.com/'
+            self.get_site = requests.get(self.site_link).text
+            self.soup = BeautifulSoup(self.get_site, 'lxml')
+            self.holiday = self.soup.find_all('h2')[0].get_text(strip=True)
+            self.holidays_parsed = db.parsed_holidays()
+            db.holiday_add(date=self.date, holiday=self.holiday)
+            print('Today is ' + colored(self.holiday, 'green') + '\nHolidays parsed: ' + colored(self.holidays_parsed, 'blue'))
+            sys.exit()
+        else:
+            print(colored('Check your internet connection', 'red'))
+            sys.exit()
+
+
+if __name__ == '__main__':
+    App()

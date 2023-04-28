@@ -9,3 +9,8 @@ class Database:
     def holiday_add(self, date, holiday):
         with self.con:
             self.con.cursor().execute("INSERT OR REPLACE INTO holidays VALUES (?, ?)", (date, holiday,))
+
+    def parsed_holidays(self):
+        with self.con:
+            result =  self.con.cursor().execute("SELECT * FROM holidays").fetchall()
+            return len(result)
