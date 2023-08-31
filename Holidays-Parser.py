@@ -1,24 +1,25 @@
+import os
 import requests
 import datetime
 import sys
 import colorama
+import urllib.request
 from db import Database
 from bs4 import BeautifulSoup
-from urllib.request import urlopen
 from termcolor import colored
 
 
-db = Database('holidays.db')
-
+CURRENT_PATH = os.path.dirname(__file__)
+db = Database(CURRENT_PATH + '/holidays.db')
 
 class App:
     def __init__(self):
         self.check_internet_connection()
         self.parser()
 
-    def check_internet_connection(self):
+    def check_internet_connection():
         try:
-            urlopen('https://google.com')
+            urllib.request.urlopen('https://google.com', timeout=1)
             return True
         except:
             return False
