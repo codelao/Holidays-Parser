@@ -7,41 +7,34 @@
 </p>
 
 
-## Screenshots
-### Parsed holiday output:
+### Usage:
 <p>
-  <img src="READMEimages/parser.png" width="50%">
+  <img src="https://i.imgur.com/Q99uksN.png" width="70%">
 </p>
 
-### Holidays archive in database file:
+### Parsed holidays' archive:
 <p>
-  <img src="READMEimages/archive.png" width="50%">
+  <img src="https://i.imgur.com/2cZUQlO.png" width="50%">
 </p>
-
-
-## Usage
-After running the script you will see today's holiday in the output and in the auto-created *holidays.db* file.<br>You can open this database file to see the archive of parsed holidays.
 
 
 ## Installation
 ### macOS/Linux
-*Note:* you need to have Python3 and Git installed in your system before moving to the parser installation steps.
-1. Use this command in the Terminal:
+1. Install:
 ```
 git clone https://github.com/codelao/Holidays-Parser.git && cd Holidays-Parser && pip3 install -r requirements.txt && chmod +x Holidays-Parser.py
 ```
-2. Finally, now you can use this command everytime you want to parse today's holiday:
+2. Run:
 ```
 ./Holidays-Parser.py
 ```
 
 ### Windows 10, 11
-*Note:* you need to have Python3 and Git installed in your system before moving to the parser installation steps.
-1. Use this command in the Command Prompt:
+1. Install:
 ```
 git clone https://github.com/codelao/Holidays-Parser.git && cd Holidays-Parser && pip3 install -r requirements.txt
 ```
-2. Finally, now you can use this command everytime you want to parse today's holiday:
+2. Run:
 ```
 python3 Holidays-Parser.py
 ```
